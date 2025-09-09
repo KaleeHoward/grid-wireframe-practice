@@ -1,6 +1,20 @@
 body {
     background-color: rgb(153, 149, 149);
     color: white;
+    display: grid;
+}
+
+@media (min-width: 900px) {
+    .aside { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr auto;
+        column-gap: 100px;
+    }
+    .column {
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
 }
 
 header {
@@ -22,19 +36,14 @@ article {
     padding: 1rem;
     border-radius: 5px;
     margin: 5px 5px 5px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-aside {
+.aside {
     background-color: rgb(31, 92, 161);
     padding: 1rem;
     border-radius: 5px;
     margin: 5px 5px 5px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
 }
-
 
 footer {
     background-color: rgb(192, 102, 0);

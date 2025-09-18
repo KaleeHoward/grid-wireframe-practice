@@ -28,8 +28,9 @@ article {
     padding: 1rem;
     border-radius: 5px;
     margin: 5px 5px 5px 0;
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
-    align-items: stretch;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
 }
 
 .aside {
@@ -44,4 +45,22 @@ footer {
     padding: 1rem;    
     border-radius: 5px;
     margin: 5px 5px 5px 0;
+}
+
+@media (max-width: 481px) {
+    .aside {
+        grid-template-rows: repeat(1fr)
+    }
+
+    div {
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article {
+        grid-template-rows: 1fr;
+        justify-content: end;
+        align-items: center;
+    }
 }
